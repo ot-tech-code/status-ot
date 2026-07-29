@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Execute Website Health Checks
         run: node scripts/monitor.js
