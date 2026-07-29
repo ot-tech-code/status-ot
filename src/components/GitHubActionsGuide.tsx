@@ -198,7 +198,7 @@ run();`;
   return (
     <div className="space-y-8">
       {/* Hero Setup banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl">
+      <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-md">
         <div className="flex items-start space-x-4">
           <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-emerald-400">
             <Github className="w-8 h-8" />
@@ -214,49 +214,49 @@ run();`;
 
       {/* 4 Step Setup Cards */}
       <div>
-        <h3 className="text-lg font-bold text-white mb-4 flex items-center space-x-2">
-          <Layers className="w-5 h-5 text-emerald-400" />
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center space-x-2">
+          <Layers className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
           <span>4-Step Quick Deployment Guide</span>
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Step 1 */}
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
-            <div className="absolute top-3 right-4 text-4xl font-black text-slate-800 select-none">01</div>
-            <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Step 1</span>
-            <h4 className="text-base font-bold text-white mb-2">Push Repo to GitHub</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Create a public or private repository on GitHub and push this project codebase to the <code className="text-slate-200">main</code> branch.
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 relative overflow-hidden shadow-sm">
+            <div className="absolute top-3 right-4 text-4xl font-black text-slate-100 dark:text-slate-800 select-none">01</div>
+            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-1">Step 1</span>
+            <h4 className="text-base font-bold text-slate-900 dark:text-white mb-2">Push Repo to GitHub</h4>
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Create a public or private repository on GitHub and push this project codebase to the <code className="text-slate-800 dark:text-slate-200 font-mono">main</code> branch.
             </p>
           </div>
 
           {/* Step 2 */}
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
-            <div className="absolute top-3 right-4 text-4xl font-black text-slate-800 select-none">02</div>
-            <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Step 2</span>
-            <h4 className="text-base font-bold text-white mb-2">Enable GitHub Pages</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              In your GitHub Repository, navigate to <strong>Settings</strong> &rarr; <strong>Pages</strong>. Set <strong>Build and deployment Source</strong> to <strong>GitHub Actions</strong>.
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 relative overflow-hidden shadow-sm">
+            <div className="absolute top-3 right-4 text-4xl font-black text-slate-100 dark:text-slate-800 select-none">02</div>
+            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-1">Step 2</span>
+            <h4 className="text-base font-bold text-slate-900 dark:text-white mb-2">Enable GitHub Pages</h4>
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              In your GitHub Repository, navigate to <strong>Settings</strong> &rr; <strong>Pages</strong>. Set <strong>Build and deployment Source</strong> to <strong>GitHub Actions</strong>.
             </p>
           </div>
 
           {/* Step 3 */}
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
-            <div className="absolute top-3 right-4 text-4xl font-black text-slate-800 select-none">03</div>
-            <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Step 3</span>
-            <h4 className="text-base font-bold text-white mb-2">Set Workflow File</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Save <code className="text-slate-200">.github/workflows/monitor.yml</code> in your repository. GitHub Actions will pick it up automatically.
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 relative overflow-hidden shadow-sm">
+            <div className="absolute top-3 right-4 text-4xl font-black text-slate-100 dark:text-slate-800 select-none">03</div>
+            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-1">Step 3</span>
+            <h4 className="text-base font-bold text-slate-900 dark:text-white mb-2">Set Workflow File</h4>
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Save <code className="text-slate-800 dark:text-slate-200 font-mono">.github/workflows/monitor.yml</code> in your repository. GitHub Actions will pick it up automatically.
             </p>
           </div>
 
           {/* Step 4 */}
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
-            <div className="absolute top-3 right-4 text-4xl font-black text-slate-800 select-none">04</div>
-            <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Step 4</span>
-            <h4 className="text-base font-bold text-white mb-2">Automatic Uptime Checks</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Actions will run every 5 min, save response codes & latency in <code className="text-slate-200">public/data/status.json</code>, and push live status updates to your GitHub Pages domain!
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 relative overflow-hidden shadow-sm">
+            <div className="absolute top-3 right-4 text-4xl font-black text-slate-100 dark:text-slate-800 select-none">04</div>
+            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-1">Step 4</span>
+            <h4 className="text-base font-bold text-slate-900 dark:text-white mb-2">Automatic Uptime Checks</h4>
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Actions will run every 5 min, save response codes & latency in <code className="text-slate-800 dark:text-slate-200 font-mono">public/data/status.json</code>, and push live status updates to your GitHub Pages domain!
             </p>
           </div>
         </div>
@@ -265,59 +265,59 @@ run();`;
       {/* Embedded File Viewers with Copy Buttons */}
       <div className="space-y-6">
         {/* File 1: Workflow YML */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-md">
-          <div className="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+          <div className="p-4 bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <FileCode className="w-4 h-4 text-emerald-400" />
-              <span className="font-mono text-xs font-bold text-white">.github/workflows/monitor.yml</span>
+              <FileCode className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="font-mono text-xs font-bold text-slate-900 dark:text-white">.github/workflows/monitor.yml</span>
             </div>
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => handleCopy(workflowYml, 'workflow')}
-                className="flex items-center space-x-1 px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition-colors"
+                className="flex items-center space-x-1 px-3 py-1 bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-mono rounded border border-slate-300 dark:border-slate-700 transition-colors"
               >
-                {copiedFile === 'workflow' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                {copiedFile === 'workflow' ? <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{copiedFile === 'workflow' ? 'Copied!' : 'Copy'}</span>
               </button>
               <button
                 onClick={() => handleDownloadFile(workflowYml, 'monitor.yml')}
-                className="flex items-center space-x-1 px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition-colors"
+                className="flex items-center space-x-1 px-3 py-1 bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-mono rounded border border-slate-300 dark:border-slate-700 transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Download</span>
               </button>
             </div>
           </div>
-          <pre className="p-4 bg-slate-950/80 font-mono text-xs text-slate-300 overflow-x-auto leading-relaxed max-h-80">
+          <pre className="p-4 bg-slate-50 dark:bg-slate-950/80 font-mono text-xs text-slate-800 dark:text-slate-300 overflow-x-auto leading-relaxed max-h-80">
             {workflowYml}
           </pre>
         </div>
 
         {/* File 2: Monitor Runner Script */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-md">
-          <div className="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+          <div className="p-4 bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Terminal className="w-4 h-4 text-emerald-400" />
-              <span className="font-mono text-xs font-bold text-white">scripts/monitor.js</span>
+              <Terminal className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="font-mono text-xs font-bold text-slate-900 dark:text-white">scripts/monitor.js</span>
             </div>
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => handleCopy(monitorJs, 'script')}
-                className="flex items-center space-x-1 px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition-colors"
+                className="flex items-center space-x-1 px-3 py-1 bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-mono rounded border border-slate-300 dark:border-slate-700 transition-colors"
               >
-                {copiedFile === 'script' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                {copiedFile === 'script' ? <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{copiedFile === 'script' ? 'Copied!' : 'Copy'}</span>
               </button>
               <button
                 onClick={() => handleDownloadFile(monitorJs, 'monitor.js')}
-                className="flex items-center space-x-1 px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition-colors"
+                className="flex items-center space-x-1 px-3 py-1 bg-white dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-mono rounded border border-slate-300 dark:border-slate-700 transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Download</span>
               </button>
             </div>
           </div>
-          <pre className="p-4 bg-slate-950/80 font-mono text-xs text-slate-300 overflow-x-auto leading-relaxed max-h-80">
+          <pre className="p-4 bg-slate-50 dark:bg-slate-950/80 font-mono text-xs text-slate-800 dark:text-slate-300 overflow-x-auto leading-relaxed max-h-80">
             {monitorJs}
           </pre>
         </div>
