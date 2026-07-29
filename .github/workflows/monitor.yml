@@ -1,0 +1,52 @@
+name: Website Status Monitor & GitHub Pages Deploy
+
+on:
+  schedule:
+    # Run every 5 minutes (GitHub Actions minimum schedule interval)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  monitor-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Execute Website Health Checks
+        run: node scripts/monitor.js
+
+      - name: Commit Updated Status Log
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/status.json
+          git diff --staged --quiet || git commit -m "chore(status): update uptime status log [skip ci]"
+          git push origin main || true
+
+      - name: Build Dashboard for GitHub Pages
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

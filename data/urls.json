@@ -1,0 +1,57 @@
+[
+  {
+    "id": "site-1",
+    "name": "Google Main Search",
+    "url": "https://www.google.com",
+    "method": "GET",
+    "expectedStatus": 200,
+    "timeout": 5000,
+    "category": "Search & Web Services",
+    "enabled": true,
+    "description": "Primary public Google search endpoint"
+  },
+  {
+    "id": "site-2",
+    "name": "GitHub Status & API",
+    "url": "https://api.github.com",
+    "method": "GET",
+    "expectedStatus": 200,
+    "timeout": 5000,
+    "category": "Developer Tools",
+    "enabled": true,
+    "description": "GitHub REST API v3 root endpoint"
+  },
+  {
+    "id": "site-3",
+    "name": "Cloudflare Public DNS",
+    "url": "https://1.1.1.1",
+    "method": "GET",
+    "expectedStatus": 200,
+    "timeout": 5000,
+    "category": "Infrastructure & DNS",
+    "enabled": true,
+    "description": "Cloudflare public DNS service web portal"
+  },
+  {
+    "id": "site-4",
+    "name": "Wikipedia Main Page",
+    "url": "https://www.wikipedia.org",
+    "method": "GET",
+    "expectedStatus": 200,
+    "timeout": 5000,
+    "category": "Information Services",
+    "enabled": true,
+    "description": "Wikipedia free online encyclopedia homepage"
+  },
+  {
+    "id": "site-5",
+    "name": "HTTPBin Status Test (200 OK)",
+    "url": "https://httpbin.org/status/200",
+    "method": "GET",
+    "expectedStatus": 200,
+    "timeout": 5000,
+    "category": "API Microservices",
+    "enabled": true,
+    "description": "Simulated endpoint returning 200 OK"
+  }
+]

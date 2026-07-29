@@ -1,0 +1,6 @@
+{
+  "name": "Website Status Monitor",
+  "description": "Automated website uptime and response time status monitor designed for GitHub Pages & GitHub Actions integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
