@@ -30,23 +30,68 @@ export default function App() {
   const [countdown, setCountdown] = useState<number>(60);
   const [autoRefreshEnabled, setAutoRefreshEnabled] = useState<boolean>(true);
 
-  // Fetch status and config from backend
+  // Fetch status and config from static JSON or backend API
   const fetchData = async () => {
     try {
-      const [statusRes, configRes] = await Promise.all([
-        fetch('/api/status'),
-        fetch('/api/config')
-      ]);
+      let fetchedStatus = null;
+      let fetchedConfig = null;
 
-      if (statusRes.ok) {
-        const data = await statusRes.json();
-        setStatusData(data);
+      // 1. Try static data files (works on GitHub Pages & static hosting)
+      try {
+        const staticStatusRes = await fetch('./data/status.json');
+        if (staticStatusRes.ok) {
+          const contentType = staticStatusRes.headers.get('content-type') || '';
+          if (!contentType.includes('html')) {
+            fetchedStatus = await staticStatusRes.json();
+          }
+        }
+      } catch (e) {
+        // ignore static fetch failure
       }
 
-      if (configRes.ok) {
-        const cfg = await configRes.json();
-        setConfig(cfg);
+      try {
+        const staticConfigRes = await fetch('./data/urls.json');
+        if (staticConfigRes.ok) {
+          const contentType = staticConfigRes.headers.get('content-type') || '';
+          if (!contentType.includes('html')) {
+            fetchedConfig = await staticConfigRes.json();
+          }
+        }
+      } catch (e) {
+        // ignore static fetch failure
       }
+
+      // 2. Fallback to /api/ endpoints if running in Express local dev environment
+      if (!fetchedStatus) {
+        try {
+          const apiStatusRes = await fetch('/api/status');
+          if (apiStatusRes.ok) {
+            const contentType = apiStatusRes.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+              fetchedStatus = await apiStatusRes.json();
+            }
+          }
+        } catch (e) {
+          // ignore API error
+        }
+      }
+
+      if (!fetchedConfig) {
+        try {
+          const apiConfigRes = await fetch('/api/config');
+          if (apiConfigRes.ok) {
+            const contentType = apiConfigRes.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+              fetchedConfig = await apiConfigRes.json();
+            }
+          }
+        } catch (e) {
+          // ignore API error
+        }
+      }
+
+      if (fetchedStatus) setStatusData(fetchedStatus);
+      if (fetchedConfig) setConfig(fetchedConfig);
     } catch (err) {
       console.error('Failed to fetch status or config:', err);
     } finally {
@@ -81,15 +126,21 @@ export default function App() {
     try {
       const res = await fetch('/api/check-now', { method: 'POST' });
       if (res.ok) {
-        const data = await res.json();
-        setStatusData(data);
-        setCountdown(60);
+        const contentType = res.headers.get('content-type') || '';
+        if (contentType.includes('json')) {
+          const data = await res.json();
+          setStatusData(data);
+          setCountdown(60);
+          setIsRefreshing(false);
+          return;
+        }
       }
     } catch (err) {
-      console.error('Manual refresh failed:', err);
-    } finally {
-      setIsRefreshing(false);
+      // fallback in static mode
     }
+
+    await fetchData();
+    setIsRefreshing(false);
   };
 
   // Quick check for single site

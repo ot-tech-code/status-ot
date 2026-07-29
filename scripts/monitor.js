@@ -9,6 +9,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 // File paths
 const CONFIG_PATH = path.join(ROOT_DIR, 'data', 'urls.json');
 const OUTPUT_PATH = path.join(ROOT_DIR, 'public', 'data', 'status.json');
+const PUBLIC_CONFIG_PATH = path.join(ROOT_DIR, 'public', 'data', 'urls.json');
 
 // Ensure directories exist
 function ensureDirs() {
@@ -227,7 +228,8 @@ async function run() {
   };
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2), 'utf-8');
-  console.log(`[${new Date().toISOString()}] Check complete! Status written to ${OUTPUT_PATH}`);
+  fs.writeFileSync(PUBLIC_CONFIG_PATH, JSON.stringify(config, null, 2), 'utf-8');
+  console.log(`[${new Date().toISOString()}] Check complete! Status written to ${OUTPUT_PATH} and ${PUBLIC_CONFIG_PATH}`);
 }
 
 run().catch(err => {
