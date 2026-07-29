@@ -4,11 +4,12 @@ import { Navbar } from './components/Navbar';
 import { StatusBanner } from './components/StatusBanner';
 import { MetricsOverview } from './components/MetricsOverview';
 import { ServiceCard } from './components/ServiceCard';
+import { ServiceTableView } from './components/ServiceTableView';
 import { ServiceDetailsModal } from './components/ServiceDetailsModal';
 import { ConfigEditor } from './components/ConfigEditor';
 import { GitHubActionsGuide } from './components/GitHubActionsGuide';
 import { IncidentHistory } from './components/IncidentHistory';
-import { Search, Filter, RefreshCw, RotateCcw, AlertTriangle } from 'lucide-react';
+import { Search, Filter, RefreshCw, RotateCcw, AlertTriangle, LayoutGrid, List } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'config' | 'github' | 'incidents'>('dashboard');
@@ -17,6 +18,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
   const [isSavingConfig, setIsSavingConfig] = useState<boolean>(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   
   // Search & Filter state
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -151,7 +153,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-white pb-16">
+    <div className="min-h-screen bg-[#0A0B0D] text-slate-100 font-sans selection:bg-emerald-500 selection:text-white pb-16">
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -178,7 +180,7 @@ export default function App() {
                 <MetricsOverview summary={statusData?.summary || null} sites={statusData?.sites || []} />
 
                 {/* Filter and Search Toolbar */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#0F1115] p-4 rounded-xl border border-slate-800">
                   <div className="relative flex-1 max-w-md">
                     <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
@@ -186,36 +188,60 @@ export default function App() {
                       placeholder="Search by name or URL..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500"
+                      className="w-full bg-[#0A0B0D] border border-slate-800 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500 font-mono"
                     />
                   </div>
 
-                  <div className="flex items-center space-x-2 overflow-x-auto pb-1 sm:pb-0">
-                    <Filter className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                    <div className="flex space-x-1">
-                      {categories.map((cat) => (
-                        <button
-                          key={cat}
-                          onClick={() => setSelectedCategory(cat)}
-                          className={`px-2.5 py-1 text-xs font-medium rounded-lg transition-colors whitespace-nowrap ${
-                            selectedCategory === cat
-                              ? 'bg-emerald-600 text-white'
-                              : 'bg-slate-950 text-slate-400 hover:text-slate-200 border border-slate-800'
-                          }`}
-                        >
-                          {cat}
-                        </button>
-                      ))}
+                  <div className="flex items-center space-x-3 overflow-x-auto pb-1 sm:pb-0">
+                    <div className="flex items-center space-x-1.5">
+                      <Filter className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                      <div className="flex space-x-1">
+                        {categories.map((cat) => (
+                          <button
+                            key={cat}
+                            onClick={() => setSelectedCategory(cat)}
+                            className={`px-2.5 py-1 text-xs font-mono font-medium rounded-lg transition-colors whitespace-nowrap ${
+                              selectedCategory === cat
+                                ? 'bg-emerald-600 text-white shadow-sm'
+                                : 'bg-[#0A0B0D] text-slate-400 hover:text-slate-200 border border-slate-800'
+                            }`}
+                          >
+                            {cat}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* View Mode Toggle */}
+                    <div className="flex items-center bg-[#0A0B0D] border border-slate-800 rounded-lg p-0.5 shrink-0">
+                      <button
+                        onClick={() => setViewMode('grid')}
+                        title="Grid View"
+                        className={`p-1.5 rounded text-xs font-mono flex items-center space-x-1 ${
+                          viewMode === 'grid' ? 'bg-slate-800 text-emerald-400 font-bold' : 'text-slate-400 hover:text-slate-200'
+                        }`}
+                      >
+                        <LayoutGrid className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => setViewMode('table')}
+                        title="High-Density Table View"
+                        className={`p-1.5 rounded text-xs font-mono flex items-center space-x-1 ${
+                          viewMode === 'table' ? 'bg-slate-800 text-emerald-400 font-bold' : 'text-slate-400 hover:text-slate-200'
+                        }`}
+                      >
+                        <List className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
                 </div>
 
-                {/* Service Cards Grid */}
+                {/* Service Cards / Table View */}
                 {filteredSites.length === 0 ? (
-                  <div className="bg-slate-900 border border-slate-800 rounded-xl p-12 text-center text-slate-400">
+                  <div className="bg-[#0F1115] border border-slate-800 rounded-xl p-12 text-center text-slate-400">
                     <p className="text-sm font-mono">No monitored endpoints match the active filter criteria.</p>
                   </div>
-                ) : (
+                ) : viewMode === 'grid' ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {filteredSites.map((site) => (
                       <ServiceCard
@@ -227,6 +253,13 @@ export default function App() {
                       />
                     ))}
                   </div>
+                ) : (
+                  <ServiceTableView
+                    sites={filteredSites}
+                    onSelectDetails={setSelectedDetailsSite}
+                    onQuickCheck={handleQuickCheck}
+                    checkingSiteId={checkingSiteId}
+                  />
                 )}
 
                 {/* Footer options */}
