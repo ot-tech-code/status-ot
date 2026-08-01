@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-01T00:11:06.327Z",
+  "lastUpdated": "2026-08-01T07:56:59.578Z",
   "summary": {
-    "lastUpdated": "2026-08-01T00:11:06.327Z",
-    "overallStatus": "operational",
+    "lastUpdated": "2026-08-01T07:56:59.578Z",
+    "overallStatus": "degraded",
     "total": 5,
-    "upCount": 5,
-    "downCount": 0,
+    "upCount": 4,
+    "downCount": 1,
     "degradedCount": 0,
-    "avgLatencyMs": 48
+    "avgLatencyMs": 1090
   },
   "sites": [
     {
@@ -18,9 +18,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T00:11:06.201Z",
+        "timestamp": "2026-08-01T07:56:54.260Z",
         "statusCode": 200,
-        "responseTimeMs": 115,
+        "responseTimeMs": 135,
         "status": "up",
         "error": null
       },
@@ -623,6 +623,13 @@
           "responseTimeMs": 115,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T07:56:54.260Z",
+          "statusCode": 200,
+          "responseTimeMs": 135,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -634,9 +641,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T00:11:06.224Z",
+        "timestamp": "2026-08-01T07:56:54.354Z",
         "statusCode": 200,
-        "responseTimeMs": 22,
+        "responseTimeMs": 94,
         "status": "up",
         "error": null
       },
@@ -1239,6 +1246,13 @@
           "responseTimeMs": 22,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T07:56:54.354Z",
+          "statusCode": 200,
+          "responseTimeMs": 94,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1250,9 +1264,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T00:11:06.291Z",
+        "timestamp": "2026-08-01T07:56:54.464Z",
         "statusCode": 200,
-        "responseTimeMs": 67,
+        "responseTimeMs": 109,
         "status": "up",
         "error": null
       },
@@ -1855,6 +1869,13 @@
           "responseTimeMs": 67,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T07:56:54.464Z",
+          "statusCode": 200,
+          "responseTimeMs": 109,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1866,9 +1887,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T00:11:06.310Z",
+        "timestamp": "2026-08-01T07:56:54.576Z",
         "statusCode": 200,
-        "responseTimeMs": 19,
+        "responseTimeMs": 112,
         "status": "up",
         "error": null
       },
@@ -2471,6 +2492,13 @@
           "responseTimeMs": 19,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T07:56:54.576Z",
+          "statusCode": 200,
+          "responseTimeMs": 112,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -2482,16 +2510,16 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T00:11:06.326Z",
-        "statusCode": 200,
-        "responseTimeMs": 16,
-        "status": "up",
-        "error": null
+        "timestamp": "2026-08-01T07:56:59.577Z",
+        "statusCode": 0,
+        "responseTimeMs": 5001,
+        "status": "down",
+        "error": "Timeout after 5000ms"
       },
-      "uptime24h": 83.5,
-      "uptime7d": 83.5,
-      "uptime30d": 83.5,
-      "avgResponseTimeMs": 805,
+      "uptime24h": 82.6,
+      "uptime7d": 82.6,
+      "uptime30d": 82.6,
+      "avgResponseTimeMs": 854,
       "history": [
         {
           "timestamp": "2026-07-28T15:49:51.124Z",
@@ -3087,6 +3115,13 @@
           "responseTimeMs": 16,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T07:56:59.577Z",
+          "statusCode": 0,
+          "responseTimeMs": 5001,
+          "status": "down",
+          "error": "Timeout after 5000ms"
         }
       ]
     }
