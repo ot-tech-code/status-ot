@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-01T20:02:38.480Z",
+  "lastUpdated": "2026-08-01T23:17:57.532Z",
   "summary": {
-    "lastUpdated": "2026-08-01T20:02:38.480Z",
+    "lastUpdated": "2026-08-01T23:17:57.532Z",
     "overallStatus": "operational",
     "total": 5,
     "upCount": 5,
     "downCount": 0,
     "degradedCount": 0,
-    "avgLatencyMs": 131
+    "avgLatencyMs": 124
   },
   "sites": [
     {
@@ -18,9 +18,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T20:02:37.956Z",
+        "timestamp": "2026-08-01T23:17:57.046Z",
         "statusCode": 200,
-        "responseTimeMs": 132,
+        "responseTimeMs": 134,
         "status": "up",
         "error": null
       },
@@ -651,6 +651,13 @@
           "responseTimeMs": 132,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T23:17:57.046Z",
+          "statusCode": 200,
+          "responseTimeMs": 134,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -662,9 +669,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T20:02:38.107Z",
+        "timestamp": "2026-08-01T23:17:57.132Z",
         "statusCode": 200,
-        "responseTimeMs": 150,
+        "responseTimeMs": 85,
         "status": "up",
         "error": null
       },
@@ -1295,6 +1302,13 @@
           "responseTimeMs": 150,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T23:17:57.132Z",
+          "statusCode": 200,
+          "responseTimeMs": 85,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1306,9 +1320,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T20:02:38.159Z",
+        "timestamp": "2026-08-01T23:17:57.243Z",
         "statusCode": 200,
-        "responseTimeMs": 52,
+        "responseTimeMs": 111,
         "status": "up",
         "error": null
       },
@@ -1939,6 +1953,13 @@
           "responseTimeMs": 52,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T23:17:57.243Z",
+          "statusCode": 200,
+          "responseTimeMs": 111,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1950,9 +1971,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T20:02:38.196Z",
+        "timestamp": "2026-08-01T23:17:57.369Z",
         "statusCode": 200,
-        "responseTimeMs": 36,
+        "responseTimeMs": 125,
         "status": "up",
         "error": null
       },
@@ -2583,6 +2604,13 @@
           "responseTimeMs": 36,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-01T23:17:57.369Z",
+          "statusCode": 200,
+          "responseTimeMs": 125,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -2594,16 +2622,16 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-01T20:02:38.479Z",
+        "timestamp": "2026-08-01T23:17:57.532Z",
         "statusCode": 200,
-        "responseTimeMs": 283,
+        "responseTimeMs": 163,
         "status": "up",
         "error": null
       },
-      "uptime24h": 80.9,
-      "uptime7d": 80.9,
-      "uptime30d": 80.9,
-      "avgResponseTimeMs": 888,
+      "uptime24h": 81.1,
+      "uptime7d": 81.1,
+      "uptime30d": 81.1,
+      "avgResponseTimeMs": 880,
       "history": [
         {
           "timestamp": "2026-07-28T15:49:51.124Z",
@@ -3225,6 +3253,13 @@
           "timestamp": "2026-08-01T20:02:38.479Z",
           "statusCode": 200,
           "responseTimeMs": 283,
+          "status": "up",
+          "error": null
+        },
+        {
+          "timestamp": "2026-08-01T23:17:57.532Z",
+          "statusCode": 200,
+          "responseTimeMs": 163,
           "status": "up",
           "error": null
         }
