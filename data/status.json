@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-14T23:59:55.609Z",
+  "lastUpdated": "2026-08-15T01:41:11.082Z",
   "summary": {
-    "lastUpdated": "2026-08-14T23:59:55.609Z",
-    "overallStatus": "degraded",
+    "lastUpdated": "2026-08-15T01:41:11.082Z",
+    "overallStatus": "operational",
     "total": 5,
-    "upCount": 4,
-    "downCount": 1,
+    "upCount": 5,
+    "downCount": 0,
     "degradedCount": 0,
-    "avgLatencyMs": 68
+    "avgLatencyMs": 136
   },
   "sites": [
     {
@@ -18,24 +18,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-14T23:59:55.393Z",
+        "timestamp": "2026-08-15T01:41:10.577Z",
         "statusCode": 200,
-        "responseTimeMs": 127,
+        "responseTimeMs": 175,
         "status": "up",
         "error": null
       },
       "uptime24h": 98.9,
       "uptime7d": 98.9,
       "uptime30d": 98.9,
-      "avgResponseTimeMs": 159,
+      "avgResponseTimeMs": 160,
       "history": [
-        {
-          "timestamp": "2026-08-07T01:44:21.770Z",
-          "statusCode": 200,
-          "responseTimeMs": 126,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-07T06:01:33.221Z",
           "statusCode": 200,
@@ -658,6 +651,13 @@
           "responseTimeMs": 127,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-15T01:41:10.577Z",
+          "statusCode": 200,
+          "responseTimeMs": 175,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -669,24 +669,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-14T23:59:55.426Z",
-        "statusCode": 403,
-        "responseTimeMs": 33,
-        "status": "down",
-        "error": "Received HTTP status code 403 (expected 200)"
+        "timestamp": "2026-08-15T01:41:10.671Z",
+        "statusCode": 200,
+        "responseTimeMs": 93,
+        "status": "up",
+        "error": null
       },
       "uptime24h": 96.7,
       "uptime7d": 96.7,
       "uptime30d": 96.7,
       "avgResponseTimeMs": 89,
       "history": [
-        {
-          "timestamp": "2026-08-07T01:44:21.829Z",
-          "statusCode": 200,
-          "responseTimeMs": 58,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-07T06:01:33.237Z",
           "statusCode": 200,
@@ -1309,6 +1302,13 @@
           "responseTimeMs": 33,
           "status": "down",
           "error": "Received HTTP status code 403 (expected 200)"
+        },
+        {
+          "timestamp": "2026-08-15T01:41:10.671Z",
+          "statusCode": 200,
+          "responseTimeMs": 93,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1320,9 +1320,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-14T23:59:55.511Z",
+        "timestamp": "2026-08-15T01:41:10.792Z",
         "statusCode": 200,
-        "responseTimeMs": 85,
+        "responseTimeMs": 121,
         "status": "up",
         "error": null
       },
@@ -1331,13 +1331,6 @@
       "uptime30d": 100,
       "avgResponseTimeMs": 108,
       "history": [
-        {
-          "timestamp": "2026-08-07T01:44:21.881Z",
-          "statusCode": 200,
-          "responseTimeMs": 52,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-07T06:01:33.288Z",
           "statusCode": 200,
@@ -1960,6 +1953,13 @@
           "responseTimeMs": 85,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-15T01:41:10.792Z",
+          "statusCode": 200,
+          "responseTimeMs": 121,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1971,9 +1971,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-14T23:59:55.544Z",
+        "timestamp": "2026-08-15T01:41:10.924Z",
         "statusCode": 200,
-        "responseTimeMs": 33,
+        "responseTimeMs": 132,
         "status": "up",
         "error": null
       },
@@ -1982,13 +1982,6 @@
       "uptime30d": 100,
       "avgResponseTimeMs": 91,
       "history": [
-        {
-          "timestamp": "2026-08-07T01:44:21.996Z",
-          "statusCode": 200,
-          "responseTimeMs": 115,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-07T06:01:33.306Z",
           "statusCode": 200,
@@ -2611,6 +2604,13 @@
           "responseTimeMs": 33,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-15T01:41:10.924Z",
+          "statusCode": 200,
+          "responseTimeMs": 132,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -2622,24 +2622,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-14T23:59:55.608Z",
+        "timestamp": "2026-08-15T01:41:11.081Z",
         "statusCode": 200,
-        "responseTimeMs": 64,
+        "responseTimeMs": 157,
         "status": "up",
         "error": null
       },
       "uptime24h": 61.1,
       "uptime7d": 61.1,
       "uptime30d": 61.1,
-      "avgResponseTimeMs": 799,
+      "avgResponseTimeMs": 800,
       "history": [
-        {
-          "timestamp": "2026-08-07T01:44:22.079Z",
-          "statusCode": 200,
-          "responseTimeMs": 83,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-07T06:01:33.326Z",
           "statusCode": 503,
@@ -3260,6 +3253,13 @@
           "timestamp": "2026-08-14T23:59:55.608Z",
           "statusCode": 200,
           "responseTimeMs": 64,
+          "status": "up",
+          "error": null
+        },
+        {
+          "timestamp": "2026-08-15T01:41:11.081Z",
+          "statusCode": 200,
+          "responseTimeMs": 157,
           "status": "up",
           "error": null
         }
