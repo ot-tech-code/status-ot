@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-16T20:38:55.054Z",
+  "lastUpdated": "2026-08-16T20:56:17.484Z",
   "summary": {
-    "lastUpdated": "2026-08-16T20:38:55.054Z",
-    "overallStatus": "degraded",
+    "lastUpdated": "2026-08-16T20:56:17.484Z",
+    "overallStatus": "operational",
     "total": 5,
-    "upCount": 4,
-    "downCount": 1,
+    "upCount": 5,
+    "downCount": 0,
     "degradedCount": 0,
-    "avgLatencyMs": 199
+    "avgLatencyMs": 89
   },
   "sites": [
     {
@@ -18,24 +18,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-16T20:38:54.501Z",
-        "statusCode": 429,
-        "responseTimeMs": 442,
-        "status": "down",
-        "error": "Received HTTP status code 429 (expected 200)"
+        "timestamp": "2026-08-16T20:56:17.177Z",
+        "statusCode": 200,
+        "responseTimeMs": 141,
+        "status": "up",
+        "error": null
       },
       "uptime24h": 97.8,
       "uptime7d": 97.8,
       "uptime30d": 97.8,
       "avgResponseTimeMs": 169,
       "history": [
-        {
-          "timestamp": "2026-08-15T06:21:51.010Z",
-          "statusCode": 200,
-          "responseTimeMs": 106,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-15T07:03:15.851Z",
           "statusCode": 200,
@@ -658,6 +651,13 @@
           "responseTimeMs": 442,
           "status": "down",
           "error": "Received HTTP status code 429 (expected 200)"
+        },
+        {
+          "timestamp": "2026-08-16T20:56:17.177Z",
+          "statusCode": 200,
+          "responseTimeMs": 141,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -669,9 +669,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-16T20:38:54.528Z",
+        "timestamp": "2026-08-16T20:56:17.242Z",
         "statusCode": 200,
-        "responseTimeMs": 27,
+        "responseTimeMs": 64,
         "status": "up",
         "error": null
       },
@@ -680,13 +680,6 @@
       "uptime30d": 97.8,
       "avgResponseTimeMs": 113,
       "history": [
-        {
-          "timestamp": "2026-08-15T06:21:51.068Z",
-          "statusCode": 200,
-          "responseTimeMs": 57,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-15T07:03:15.935Z",
           "statusCode": 200,
@@ -1309,6 +1302,13 @@
           "responseTimeMs": 27,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-16T20:56:17.242Z",
+          "statusCode": 200,
+          "responseTimeMs": 64,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1320,9 +1320,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-16T20:38:54.626Z",
+        "timestamp": "2026-08-16T20:56:17.306Z",
         "statusCode": 200,
-        "responseTimeMs": 98,
+        "responseTimeMs": 63,
         "status": "up",
         "error": null
       },
@@ -1331,13 +1331,6 @@
       "uptime30d": 100,
       "avgResponseTimeMs": 97,
       "history": [
-        {
-          "timestamp": "2026-08-15T06:21:51.130Z",
-          "statusCode": 200,
-          "responseTimeMs": 62,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-15T07:03:15.987Z",
           "statusCode": 200,
@@ -1960,6 +1953,13 @@
           "responseTimeMs": 98,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-16T20:56:17.306Z",
+          "statusCode": 200,
+          "responseTimeMs": 63,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1971,24 +1971,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-16T20:38:54.783Z",
+        "timestamp": "2026-08-16T20:56:17.398Z",
         "statusCode": 200,
-        "responseTimeMs": 156,
+        "responseTimeMs": 91,
         "status": "up",
         "error": null
       },
       "uptime24h": 100,
       "uptime7d": 100,
       "uptime30d": 100,
-      "avgResponseTimeMs": 87,
+      "avgResponseTimeMs": 86,
       "history": [
-        {
-          "timestamp": "2026-08-15T06:21:51.310Z",
-          "statusCode": 200,
-          "responseTimeMs": 179,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-15T07:03:16.010Z",
           "statusCode": 200,
@@ -2611,6 +2604,13 @@
           "responseTimeMs": 156,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-16T20:56:17.398Z",
+          "statusCode": 200,
+          "responseTimeMs": 91,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -2622,24 +2622,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-16T20:38:55.054Z",
+        "timestamp": "2026-08-16T20:56:17.484Z",
         "statusCode": 200,
-        "responseTimeMs": 271,
+        "responseTimeMs": 86,
         "status": "up",
         "error": null
       },
-      "uptime24h": 47.8,
-      "uptime7d": 47.8,
-      "uptime30d": 47.8,
+      "uptime24h": 48.9,
+      "uptime7d": 48.9,
+      "uptime30d": 48.9,
       "avgResponseTimeMs": 1209,
       "history": [
-        {
-          "timestamp": "2026-08-15T06:21:51.424Z",
-          "statusCode": 503,
-          "responseTimeMs": 114,
-          "status": "down",
-          "error": "Received HTTP status code 503 (expected 200)"
-        },
         {
           "timestamp": "2026-08-15T07:03:16.294Z",
           "statusCode": 503,
@@ -3260,6 +3253,13 @@
           "timestamp": "2026-08-16T20:38:55.054Z",
           "statusCode": 200,
           "responseTimeMs": 271,
+          "status": "up",
+          "error": null
+        },
+        {
+          "timestamp": "2026-08-16T20:56:17.484Z",
+          "statusCode": 200,
+          "responseTimeMs": 86,
           "status": "up",
           "error": null
         }
