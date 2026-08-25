@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-25T23:19:24.991Z",
+  "lastUpdated": "2026-08-25T23:43:51.755Z",
   "summary": {
-    "lastUpdated": "2026-08-25T23:19:24.991Z",
+    "lastUpdated": "2026-08-25T23:43:51.755Z",
     "overallStatus": "operational",
     "total": 5,
     "upCount": 5,
     "downCount": 0,
     "degradedCount": 0,
-    "avgLatencyMs": 92
+    "avgLatencyMs": 143
   },
   "sites": [
     {
@@ -18,9 +18,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-25T23:19:24.659Z",
+        "timestamp": "2026-08-25T23:43:51.142Z",
         "statusCode": 200,
-        "responseTimeMs": 130,
+        "responseTimeMs": 102,
         "status": "up",
         "error": null
       },
@@ -29,13 +29,6 @@
       "uptime30d": 98.9,
       "avgResponseTimeMs": 187,
       "history": [
-        {
-          "timestamp": "2026-08-23T17:49:05.037Z",
-          "statusCode": 200,
-          "responseTimeMs": 131,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-23T18:01:20.735Z",
           "statusCode": 200,
@@ -658,6 +651,13 @@
           "responseTimeMs": 130,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-25T23:43:51.142Z",
+          "statusCode": 200,
+          "responseTimeMs": 102,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -669,24 +669,17 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-25T23:19:24.768Z",
+        "timestamp": "2026-08-25T23:43:51.314Z",
         "statusCode": 200,
-        "responseTimeMs": 109,
+        "responseTimeMs": 171,
         "status": "up",
         "error": null
       },
-      "uptime24h": 97.8,
-      "uptime7d": 97.8,
-      "uptime30d": 97.8,
+      "uptime24h": 98.9,
+      "uptime7d": 98.9,
+      "uptime30d": 98.9,
       "avgResponseTimeMs": 84,
       "history": [
-        {
-          "timestamp": "2026-08-23T17:49:05.262Z",
-          "statusCode": 504,
-          "responseTimeMs": 225,
-          "status": "down",
-          "error": "Received HTTP status code 504 (expected 200)"
-        },
         {
           "timestamp": "2026-08-23T18:01:20.766Z",
           "statusCode": 200,
@@ -1309,6 +1302,13 @@
           "responseTimeMs": 109,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-25T23:43:51.314Z",
+          "statusCode": 200,
+          "responseTimeMs": 171,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1320,9 +1320,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-25T23:19:24.833Z",
+        "timestamp": "2026-08-25T23:43:51.438Z",
         "statusCode": 200,
-        "responseTimeMs": 64,
+        "responseTimeMs": 123,
         "status": "up",
         "error": null
       },
@@ -1331,13 +1331,6 @@
       "uptime30d": 100,
       "avgResponseTimeMs": 117,
       "history": [
-        {
-          "timestamp": "2026-08-23T17:49:05.387Z",
-          "statusCode": 200,
-          "responseTimeMs": 125,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-23T18:01:20.855Z",
           "statusCode": 200,
@@ -1960,6 +1953,13 @@
           "responseTimeMs": 64,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-25T23:43:51.438Z",
+          "statusCode": 200,
+          "responseTimeMs": 123,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -1971,9 +1971,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-25T23:19:24.911Z",
+        "timestamp": "2026-08-25T23:43:51.532Z",
         "statusCode": 200,
-        "responseTimeMs": 78,
+        "responseTimeMs": 94,
         "status": "up",
         "error": null
       },
@@ -1982,13 +1982,6 @@
       "uptime30d": 100,
       "avgResponseTimeMs": 98,
       "history": [
-        {
-          "timestamp": "2026-08-23T17:49:05.493Z",
-          "statusCode": 200,
-          "responseTimeMs": 105,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-23T18:01:20.991Z",
           "statusCode": 200,
@@ -2611,6 +2604,13 @@
           "responseTimeMs": 78,
           "status": "up",
           "error": null
+        },
+        {
+          "timestamp": "2026-08-25T23:43:51.532Z",
+          "statusCode": 200,
+          "responseTimeMs": 94,
+          "status": "up",
+          "error": null
         }
       ]
     },
@@ -2622,9 +2622,9 @@
       "enabled": true,
       "expectedStatus": 200,
       "current": {
-        "timestamp": "2026-08-25T23:19:24.990Z",
+        "timestamp": "2026-08-25T23:43:51.755Z",
         "statusCode": 200,
-        "responseTimeMs": 79,
+        "responseTimeMs": 223,
         "status": "up",
         "error": null
       },
@@ -2633,13 +2633,6 @@
       "uptime30d": 98.9,
       "avgResponseTimeMs": 344,
       "history": [
-        {
-          "timestamp": "2026-08-23T17:49:05.712Z",
-          "statusCode": 200,
-          "responseTimeMs": 219,
-          "status": "up",
-          "error": null
-        },
         {
           "timestamp": "2026-08-23T18:01:21.558Z",
           "statusCode": 200,
@@ -3260,6 +3253,13 @@
           "timestamp": "2026-08-25T23:19:24.990Z",
           "statusCode": 200,
           "responseTimeMs": 79,
+          "status": "up",
+          "error": null
+        },
+        {
+          "timestamp": "2026-08-25T23:43:51.755Z",
+          "statusCode": 200,
+          "responseTimeMs": 223,
           "status": "up",
           "error": null
         }
